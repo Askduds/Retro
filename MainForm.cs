@@ -91,6 +91,12 @@ namespace Retro
             return result;
         }
 
+        /// <summary>
+        /// Attempts to get the region for the game.  It assumes that region info is in () in the file name
+        /// It looks at all such occurances and assumes the one that has the best score is the one to go with.
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns>The region we've gone with for the game</returns>
         private string GetRegionString(FileInfo file)
         {
             string result = "ERR";
@@ -116,6 +122,9 @@ namespace Retro
             return result;
         }
 
+        /// <summary>Gets the "score" for the region of this file.  Retro uses this to determine the best version of the game to show.</summary>
+        /// <param name="regionString"></param>
+        /// <returns>The "score" (lowest will win) of the particular region of the file.</returns>
         private int GetRegionInt(string regionString)
         {
             int result;
@@ -146,6 +155,8 @@ namespace Retro
                     ListViewItem item = new ListViewItem();
                     item.Text = file.DisplayName;
 
+                    // Here's where the narrowing down happens, we add it to the list if we're not searching or if there's a case insensitive match for the search string
+                    // This is where you'd refactor out less dumb searching.
                     if (!searching || item.Text.ToUpper().Contains(searchString))
                     {
                         Machine machine = GetMachine(file);
@@ -186,8 +197,11 @@ namespace Retro
         {
             Game gameTorun = (Game)listView1.SelectedItems[0].Tag;
             status("Launching : " + gameTorun.DisplayName);
+            // An asumption is made here that the emulators are all under /emu but given we're portable
+            // and it'd be really ugly if you didn't, you will.
             string emuPath = Application.StartupPath + "\\emu\\" + GetMachine(gameTorun).EmuLocation;
             string romname = gameTorun.Path;
+            // The assumption here is that extra parmas can go before the gam's file name.
             System.Diagnostics.Process.Start(emuPath, GetMachine(gameTorun).ExtraParams + " \""+romname);
             status("Ready.");
         }
