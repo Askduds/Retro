@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<root>
+	<Machine machine = "sms" displayname = "Sega Master System" color = "Blue" extensionlist = "sms"
+		emuLocation ="Sega Master System\dega.exe" extraParams = ""/>
+	<Machine machine = "smd" displayname = "Sega Mega Drive" color = "Blue" extensionlist = "smd,bin"
+		emuLocation ="Sega Mega Drive\Kega.exe" extraParams = ""/>
+	<Machine machine = "sg" displayname = "Sega SG-1000" color = "Blue" extensionlist = "sg"
+		emuLocation ="Sega Mega Drive\Kega.exe" extraParams = ""/>
+	<Machine machine = "gg" displayname = "Sega GameGear" color = "Blue" extensionlist = "gg"
+		emuLocation ="Sega Mega Drive\Kega.exe" extraParams = ""/>
+	<Machine machine = "nes" displayname = "Nintendo NES" color = "Red" extensionlist = "nes"
+		emuLocation ="Nintendo NES\fceux.exe" extraParams = ""/>
+	<Machine machine = "smc" displayname = "Nintendo SNES" color = "Red" extensionlist = "smc,fig"
+		emuLocation ="Nintendo SNES\snes9x.exe" extraParams = ""/>
+	<Machine machine = "gb" displayname = "Nintendo Gameboy" color = "Red" extensionlist = "gb"
+		emuLocation ="Nintendo Gameboy\vba.exe" extraParams = ""/>
+	<Machine machine = "gbc" displayname = "Nintendo Gameboy Color" color = "Red" extensionlist = "gbc"
+		emuLocation ="Nintendo Gameboy\vba.exe" extraParams = ""/>
+	<Machine machine = "gba" displayname = "Nintendo Gameboy Advance" color = "Red" extensionlist = "gba"
+		emuLocation ="Nintendo Gameboy\vba.exe" extraParams = ""/>
+	<Machine machine = "32x" displayname = "Sega 32X" color = "Blue" extensionlist = "32x"
+		emuLocation ="Sega Mega Drive\Kega.exe" extraParams = ""/>
+	<Machine machine = "psx" displayname = "Sony Playstation" color = "Green" extensionlist = "img,cue"
+		emuLocation ="Sony Playstation\epsxe.exe" extraParams = "-nogui -loadbin"/>
+</root>

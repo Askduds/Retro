@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<root>
+	<Score score = "10">
+		<RegionList>US,U,USA,4</RegionList>
+	</Score>
+	<Score score = "20">
+		<RegionList>UE,JUE,JU,UJE,JEU,UEJ,EUJ,EJU,UJ,8</RegionList>
+	</Score>
+	<Score score = "30">
+		<RegionList>EU,E,JE,UK,GB</RegionList>
+	</Score>
+	<Score score = "40">
+		<RegionList>AU,A</RegionList>
+	</Score>
+	<Score score = "50">
+		<RegionList>F,S,NL,G,I,H,HK</RegionList>
+	</Score>
+	<Score score = "60">
+		<RegionList>SW,GR,FN,B</RegionList>
+	</Score>
+	<Score score = "100">
+		<RegionList>J,JP,JPN,JAP,1</RegionList>
+	</Score>
+	<Score score = "998">
+		<RegionList>5,CN,C,Chinese,Unk,Unl,KS,K</RegionList>
+	</Score>
+</root>
